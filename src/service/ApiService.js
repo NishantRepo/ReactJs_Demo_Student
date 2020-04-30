@@ -8,8 +8,8 @@ class ApiService {
         return axios.get(STUDENT_API_BASE_URL + '/getAll');
     }
 
-    getStudentById() {
-        return axios.get(STUDENT_API_BASE_URL + '/get');
+    getStudentById(id) {
+        return axios.get(STUDENT_API_BASE_URL + '/get?id='+id);
     }
 
     saveStudent(student) {

@@ -20,9 +20,9 @@ class EditStudentComponent extends Component {
     }
 
     loadStudent() {
-        ApiService.getStudentById(window.localStorage.getItem("stud"))
+        ApiService.getStudentById(window.localStorage.getItem("studId"))
             .then((res) => {
-                let student = res.data.result;
+                let student = res.data;
                 this.setState({
                 id: student.id,
                 name: student.name,

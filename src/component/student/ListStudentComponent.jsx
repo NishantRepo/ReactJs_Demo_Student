@@ -30,8 +30,8 @@ class ListStudentComponent extends Component {
             });
     }
 
-    updateStudent(student) {
-        window.localStorage.setItem("stud", student);
+    updateStudent(id) {
+        window.localStorage.setItem("studId", id);
         this.props.history.push('/update-student');
     }
     addStudent() {
@@ -69,7 +69,7 @@ class ListStudentComponent extends Component {
                                         <td>{student.address}</td>
                                         <td>
                                             <button className="btn btn-success" onClick={() => this.deleteStudent(student)}> Delete</button>
-                                            <button className="btn btn-success" onClick={() => this.updateStudent(student)} style={{marginLeft: '20px'}}> Update</button>
+                                            <button className="btn btn-success" onClick={() => this.updateStudent(student.id)} style={{marginLeft: '20px'}}> Update</button>
                                        </td>
                                     </tr>
                              )

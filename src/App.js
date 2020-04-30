@@ -12,6 +12,7 @@ function App() {
               <div className="col-md-6">
                   <h1 className="text-center" style={style}>Student Application</h1>
                   <Switch>
+                      <Route path="/" exact component={ListStudentComponent} />
                       <Route path="/student" exact component={ListStudentComponent} />
                       <Route path="/add-student" component={AddStudentComponent} />
                       <Route path="/update-student" component={EditStudentComponent} />
